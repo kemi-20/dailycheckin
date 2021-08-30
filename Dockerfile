@@ -3,6 +3,7 @@ FROM python:3.8-alpine
 WORKDIR /dailycheckin
 
 RUN mkdir -p config
+
 RUN curl https://gitee.com/sitoi/dailycheckin/raw/main/docker/config.template.json -o config/config.json
 
 RUN docker run -d -v $(pwd)/config:/dailycheckin/config \
