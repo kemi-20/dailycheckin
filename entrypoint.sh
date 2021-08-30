@@ -4,13 +4,15 @@ echo "安装sudo"
 yum install sudo -y
 
 echo "安装vim"
-sudo yum install vim -y
+yum install vim -y
 
 echo "安装wget"
-sudo yum install wget -y
+yum install wget -y
 
+echo "python版本"
+python
 echo "安装pip"
-sudo yum install python-pip
+yum install python-pip
 
 echo "pip升级"
 pip install --upgrade pip
