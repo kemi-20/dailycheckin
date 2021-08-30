@@ -1,15 +1,18 @@
 #!/bin/bash
 
+echo "安装vim"
 sudo yum install vim
 
+echo "安装wget"
 sudo yum install wget
 
-sudo yum -y install epel-release
-
+echo "安装pip"
 sudo yum install python-pip
 
+echo "pip升级"
 pip install --upgrade pip
 
+echo "安装dailycheckin"
 pip install dailycheckin --user
 
 echo "在当前目录下创建 config 文件夹"
