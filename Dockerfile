@@ -1,18 +1,8 @@
-FROM python:3.8-alpine
+FROM alpine:latest
 
-WORKDIR /dailycheckin
+ADD entrypoint.sh /opt/entrypoint.sh
 
-RUN mkdir -p config
+RUN apk add --no-cache --virtual .build-deps ca-certificates curl \
+ && chmod +x /opt/entrypoint.sh
 
-RUN curl https://github.com/sitoi/dailycheckin/raw/main/docker/config.template.json -o config/config.json
-
-RUN docker run -d -v $(pwd)/config:/dailycheckin/config \
-    && -v $(pwd)/logs:/dailycheckin/logs \
-    && --name dailycheckin \
-    && --restart always \
-    && sitoi/dailycheckin:latest
-
-ADD . /dailycheckin
-
-
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["sh", "-c", "/opt/entrypoint.sh"]
