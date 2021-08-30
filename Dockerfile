@@ -4,7 +4,7 @@ WORKDIR /dailycheckin
 
 RUN mkdir -p config
 
-RUN curl https://gitee.com/sitoi/dailycheckin/raw/main/docker/config.template.json -o config/config.json
+RUN curl https://github.com/sitoi/dailycheckin/raw/main/docker/config.template.json -o config/config.json
 
 RUN docker run -d -v $(pwd)/config:/dailycheckin/config \
     && -v $(pwd)/logs:/dailycheckin/logs \
