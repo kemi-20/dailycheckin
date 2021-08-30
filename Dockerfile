@@ -8,9 +8,9 @@ RUN curl https://gitee.com/sitoi/dailycheckin/raw/main/docker/config.template.js
 
 RUN docker run -d -v $(pwd)/config:/dailycheckin/config \
     && -v $(pwd)/logs:/dailycheckin/logs \
-    && --name dailycheckin 
+    && --name dailycheckin \
     && --restart always \
-    && sitoi/dailycheckin:latest \
+    && sitoi/dailycheckin:latest
 
 ADD . /dailycheckin
 
