@@ -40,7 +40,7 @@
 ## 详细文档
 
 - 国内地址: [https://sitoi.gitee.io/dailycheckin/](https://sitoi.gitee.io/dailycheckin/)
-
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://dashboard.heroku.com/new?template=https://github.com/kemi-20/dailycheckin)
 ## 签到列表
 
 🟢: 正常运行 🔴: 脚本暂不可用 🔵: 可以执行(需更新) 🟡: 待测试 🟤: 看脸
