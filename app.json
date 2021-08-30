@@ -1,0 +1,7 @@
+{
+    "name": "DailyCheckin",
+    "description": "Deploy DailyCheckin on Heroku.",
+    "website": "https://github.com/kemi-20/v2ray-heroku",
+    "repository": "https://github.com/kemi-20/v2ray-heroku",
+    "stack": "container"
+}
