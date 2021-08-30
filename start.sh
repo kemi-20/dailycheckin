@@ -6,10 +6,15 @@ export LANG="zh_CN.UTF-8"
 echo "安装最新依赖..."
 pip install dailycheckin --upgrade
 
+ls
+
 defaultListFile="/dailycheckin/default_list.sh"
 
 customListFile="/dailycheckin/$CUSTOM_LIST_FILE"
 mergedListFile="/dailycheckin/merged_list_file.sh"
+
+echo "启动dailycheckin"
+dailycheckin
 
 if type ts >/dev/null 2>&1; then
     echo 'moreutils tools installed, default task append |ts output'
@@ -70,8 +75,5 @@ if [ $CUSTOM_LIST_FILE ]; then
   chmod -R 777 $customListFile
 fi
 
-echo "启动dailycheckin"
-dailycheckin
 
-ls
 crond -f
