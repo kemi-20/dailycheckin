@@ -70,4 +70,8 @@ if [ $CUSTOM_LIST_FILE ]; then
   chmod -R 777 $customListFile
 fi
 
+echo "启动dailycheckin"
+dailycheckin
+
+ls
 crond -f
