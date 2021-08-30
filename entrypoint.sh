@@ -1,10 +1,13 @@
 #!/bin/bash
 
+echo "安装sudo"
+yum install sudo -y
+
 echo "安装vim"
-sudo yum install vim
+sudo yum install vim -y
 
 echo "安装wget"
-sudo yum install wget
+sudo yum install wget -y
 
 echo "安装pip"
 sudo yum install python-pip
