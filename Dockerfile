@@ -10,7 +10,7 @@ RUN docker run -d -v $(pwd)/config:/dailycheckin/config \
     && -v $(pwd)/logs:/dailycheckin/logs \
     && --name dailycheckin 
     && --restart always \
-    && sitoi/dailycheckin:latest
+    && sitoi/dailycheckin:latest \
 
 ADD . /dailycheckin
 
